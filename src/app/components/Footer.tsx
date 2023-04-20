@@ -4,8 +4,8 @@ import {
   Devices,
   HeartStraight,
   MicrophoneStage,
-  PauseCircle,
   PictureInPicture,
+  Play,
   Queue,
   Repeat,
   Shuffle,
@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <div className="flex  items-center bg-zinc-800 border-t border-zinc-700 px-4 h-[90px] min-w-[768px]">
       <div className="flex items-center basis-1/3 ">
-        <img src="/album.jpg" alt="" className="h-14 w-14" />
+        <img src="/album-gustavo-lima.jpg" alt="" className="h-14 w-14" />
         <div className="flex flex-col mx-4">
           <div className="flex items-center ">
             <span className=" leading font-medium">Dance Monkey</span>
@@ -44,8 +44,8 @@ export default function Footer() {
               <SkipBack size={20} weight="fill" />
             </button>
           </div>
-          <button className="h-8 w-8 flex justify-center items-center">
-            <PauseCircle size={32} weight="fill" />
+          <button className="h-8 w-8 flex justify-center items-center bg-white rounded-full text-black">
+            <Play size={18} weight="fill" />
           </button>
           <div className="flex flex-1 justify-start gap-2">
             <button className="h-8 w-8 flex justify-center items-center">
@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex justify-center items-center text-[0.6875rem] gap-2">
-          <div className="w-10 text-right">2:30</div>
+          <div className="w-10 text-right">0:30</div>
           <div className="h-1 bg-zinc-600 w-16 rounded  flex-1">
             <div className="h-1 bg-white w-8 rounded"></div>
           </div>
