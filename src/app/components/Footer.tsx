@@ -16,7 +16,7 @@ import {
 
 export default function Footer() {
   return (
-    <div className="flex  items-center bg-zinc-800 border-t border-zinc-700 px-4 h-[90px] min-w-[768px]">
+    <div className="flex items-center bg-zinc-800 border-t border-zinc-700 px-4 h-[90px] min-w-[768px]">
       <div className="flex items-center basis-1/3 ">
         <img src="/album-gustavo-lima.jpg" alt="" className="h-14 w-14" />
         <div className="flex flex-col mx-4">
