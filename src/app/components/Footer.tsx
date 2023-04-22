@@ -58,7 +58,7 @@ export default function Footer() {
         </div>
         <div className="flex justify-center items-center text-[0.6875rem] gap-2">
           <div className="w-10 text-right">0:30</div>
-          <div className="h-1 bg-zinc-600 w-16 rounded  flex-1">
+          <div className="h-1 bg-zinc-600 w-16 rounded flex-1">
             <div className="h-1 bg-white w-8 rounded"></div>
           </div>
           <div className="w-10 text-left">2:30</div>
@@ -87,7 +87,7 @@ export default function Footer() {
           <div className="flex group h-1 bg-white rounded-lg">
             <input
               type="range"
-              className="h-1 w-20 rounded-lg invisible group-hover:visible group-hover:bg-green-600  "
+              className="h-1 w-20 rounded-lg invisible group-hover:visible group-hover:bg-green-600"
             ></input>
           </div>
         </div>

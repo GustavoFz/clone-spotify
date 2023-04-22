@@ -8,10 +8,10 @@ import {
 
 export default function Aside() {
   return (
-    <nav className="w-72 bg-zinc-950 ">
+    <nav className="w-72 bg-zinc-950">
       <div className="pt-6">
         <div className="">
-          <a href="" className="flex px-6  mb-6">
+          <a href="" className="flex px-6 mb-6">
             <svg viewBox="0 0 1134 340" className="h-10">
               <title>Spotify</title>
               <path
@@ -51,7 +51,7 @@ export default function Aside() {
           </button>
 
           <div className="h-[1px] mx-6 bg-zinc-600 mt-2"></div>
-          <ul className="flex flex-col py-2 text-zinc-400 font-medium cursor-default ">
+          <ul className="flex flex-col py-2 text-zinc-400 font-medium cursor-default">
             <li className="h-8 flex px-6 group items-center">
               <a
                 href=""
@@ -71,7 +71,7 @@ export default function Aside() {
             <li className="h-8 flex px-6 group items-center">
               <a
                 href=""
-                className="truncate  cursor-default  group-hover:text-white "
+                className="truncate  cursor-default  group-hover:text-white"
               >
                 Bruno e Marrone - antigas e melhores sdssdsd
               </a>
