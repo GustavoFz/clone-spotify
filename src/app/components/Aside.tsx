@@ -65,7 +65,7 @@ export default function Aside() {
                 href=""
                 className="truncate cursor-default group-hover:text-white"
               >
-                I'm an Albatroz Radio
+                {"I'm"} an Albatroz Radio
               </a>
             </li>
             <li className="h-8 flex px-6 group items-center">

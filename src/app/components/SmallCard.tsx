@@ -1,5 +1,6 @@
 'use client';
 import { PlayCircle } from '@phosphor-icons/react';
+import Image from 'next/image';
 
 interface SmalCardProps {
   name: string;
@@ -9,7 +10,9 @@ interface SmalCardProps {
 export default function SmallCard(props: SmalCardProps) {
   return (
     <div className="flex items-center rounded-md bg-zinc-500/30 group cursor-pointer">
-      <img
+      <Image
+        width={640}
+        height={640}
         src={props.img}
         alt=""
         className="h-16 w-16 lg:w-20 lg:h-20 rounded-l-md"

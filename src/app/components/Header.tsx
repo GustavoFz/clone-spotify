@@ -1,5 +1,6 @@
 'use client';
 import { CaretLeft, CaretRight, CaretUp } from '@phosphor-icons/react';
+import Image from 'next/image';
 
 export default function Header() {
   return (
@@ -20,7 +21,9 @@ export default function Header() {
         </div>
         <div>
           <button className=" flex items-center bg-black/50 p-[2px] rounded-full font-bold text-sm gap-2 h-8">
-            <img
+            <Image
+              width={320}
+              height={320}
               src="https://avatars.githubusercontent.com/u/29576822?v=4"
               alt=""
               className="h-7 w-7 rounded-full"

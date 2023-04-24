@@ -3,7 +3,7 @@ import SmallCard from './components/SmallCard';
 
 export default function Home() {
   return (
-    <div className="px-4 lg:px-8">
+    <div>
       <section className="pt-4">
         <div className="mb-4">
           <h2 className="font-bold text-3xl">Good evening</h2>

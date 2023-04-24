@@ -19,9 +19,10 @@ export default function RootLayout({
         <div className="h-screen flex flex-col overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
           <div className="flex flex-1">
             <Aside />
-            <div className="max-h-[calc(100vh-96px)] overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] min-w-[calc(767px-288px)]">
+            <div className="max-h-[calc(100vh-96px)] overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] w-full min-w-[calc(767px-288px)]">
               <Header />
-              {children}
+              <div className="px-4 lg:px-8">{children}</div>
+
               <div className="pt-6 px-8">
                 <div>footer</div>
               </div>

@@ -1,5 +1,6 @@
 'use client';
 import { Play } from '@phosphor-icons/react';
+import Image from 'next/image';
 
 interface CardProps {
   type: string;
@@ -17,10 +18,18 @@ export default function Card(props: CardProps) {
     <div className="p-4 bg-black/50 rounded-md cursor-pointer group hover:bg-zinc-700/50 transition duration-300">
       <div>
         <div className="relative pb-[100%] mb-4">
-          <img src={props.imgCard} alt="" className="rounded-md absolute" />
+          <Image
+            src={props.imgCard}
+            width={300}
+            height={300}
+            alt=""
+            className="rounded-md absolute"
+          />
           {props.type === 'new-podcast' ? (
-            <img
-              src={props.imgPodcast}
+            <Image
+              src={props.imgPodcast as string}
+              width={64}
+              height={64}
               alt=""
               className="rounded h-10 w-10 absolute bottom-[-6px] left-[-6px]"
             />
