@@ -24,7 +24,7 @@ export default function Header() {
             <Image
               width={320}
               height={320}
-              src="https://avatars.githubusercontent.com/u/29576822?v=4"
+              src="/foto-perfil.jpg"
               alt=""
               className="h-7 w-7 rounded-full"
             />
