@@ -1,3 +1,4 @@
+'use client';
 import { PlayCircle } from '@phosphor-icons/react';
 
 interface SmalCardProps {

@@ -1,3 +1,4 @@
+'use client';
 import { Play } from '@phosphor-icons/react';
 
 interface CardProps {
