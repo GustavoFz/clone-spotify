@@ -4,7 +4,7 @@ import Header from './components/Header';
 import './globals.css';
 
 export const metadata = {
-  title: 'Clone Spotify',
+  title: 'Spotify Clone',
   description: 'This is a Spotify clone',
 };
 
@@ -22,10 +22,6 @@ export default function RootLayout({
             <div className="max-h-[calc(100vh-96px)] overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] w-full min-w-[calc(767px-288px)]">
               <Header />
               <div className="px-4 lg:px-8">{children}</div>
-
-              <div className="pt-6 px-8">
-                <div>footer</div>
-              </div>
             </div>
           </div>
           <Footer />

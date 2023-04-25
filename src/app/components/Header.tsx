@@ -1,5 +1,5 @@
 'use client';
-import { CaretLeft, CaretRight, CaretUp } from '@phosphor-icons/react';
+import { CaretDown, CaretLeft, CaretRight } from '@phosphor-icons/react';
 import Image from 'next/image';
 
 export default function Header() {
@@ -29,7 +29,7 @@ export default function Header() {
               className="h-7 w-7 rounded-full"
             />
             Gustavo
-            <CaretUp size={16} weight="fill" className="mr-2" />
+            <CaretDown size={16} weight="fill" className="mr-2" />
           </button>
         </div>
       </div>
