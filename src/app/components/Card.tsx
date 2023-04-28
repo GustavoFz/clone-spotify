@@ -25,7 +25,7 @@ export default function Card(props: CardProps) {
             alt=""
             className="rounded-md absolute"
           />
-          {props.type === 'new-podcast' ? (
+          {props.type === 'new-podcast' && (
             <Image
               src={props.imgPodcast as string}
               width={64}
@@ -33,8 +33,6 @@ export default function Card(props: CardProps) {
               alt=""
               className="rounded h-10 w-10 absolute bottom-[-6px] left-[-6px]"
             />
-          ) : (
-            ''
           )}
 
           <div className="ml-2 opacity-0 group-hover:opacity-100 transition group-hover:-translate-y-2 duration-300 drop-shadow-lg absolute bottom-0 right-2">

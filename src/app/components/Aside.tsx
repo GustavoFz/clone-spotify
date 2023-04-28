@@ -5,8 +5,12 @@ import {
   MagnifyingGlass,
   PlusSquare,
 } from '@phosphor-icons/react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Aside() {
+  const path = usePathname();
+
   return (
     <nav className="w-72 bg-zinc-950">
       <div className="pt-6">
@@ -22,27 +26,33 @@ export default function Aside() {
           </a>
         </div>
         <div className="flex flex-col px-6 font-bold text-sm">
-          <a
-            href=""
-            className="flex items-center gap-4 h-10 text-zinc-400 hover:text-white duration-500"
+          <Link
+            href="/"
+            className={`flex items-center gap-4 h-10 hover:text-white duration-500 ${
+              path === '/' ? 'text-white' : 'text-zinc-400'
+            }`}
           >
             <House size={28} />
             Home
-          </a>
-          <a
-            href=""
-            className="flex items-center gap-4 h-10 text-zinc-400 hover:text-white duration-500"
+          </Link>
+          <Link
+            href="/search"
+            className={`flex items-center gap-4 h-10  hover:text-white duration-500 ${
+              path === '/search' ? 'text-white' : 'text-zinc-400'
+            }`}
           >
             <MagnifyingGlass size={28} />
             Search
-          </a>
-          <a
-            href=""
-            className="flex items-center gap-4 h-10 text-zinc-400 hover:text-white duration-500"
+          </Link>
+          <Link
+            href="/collection"
+            className={`flex items-center gap-4 h-10 hover:text-white duration-500 ${
+              path === '/collection' ? 'text-white' : 'text-zinc-400'
+            }`}
           >
             <Books size={28} />
             Your Library
-          </a>
+          </Link>
         </div>
         <div className="flex flex-col font-bold text-sm mt-6">
           <button className="flex px-6 items-center gap-4 h-10 text-zinc-400 hover:text-white duration-500">
