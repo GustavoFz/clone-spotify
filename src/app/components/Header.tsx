@@ -1,15 +1,25 @@
 'use client';
 import { CaretDown, CaretLeft, CaretRight } from '@phosphor-icons/react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function Header() {
+  const route = useRouter();
+
   return (
-    <div className="flex justify-between items-center h-16 px-4 lg:px-8 py-4">
+    <div className=" bg-zinc-800 flex justify-between items-center h-16 w- px-4 lg:px-8 py-4 sticky top-0 w-auto">
       <div className="flex items-center gap-4 ">
-        <button className="flex items-center justify-center bg-black/50 rounded-full w-8 h-8">
+        <button
+          onClick={() => route.back()}
+          className="flex items-center justify-center bg-black/50 rounded-full w-8 h-8"
+        >
           <CaretLeft size={'20px'} />
         </button>
-        <button className="flex items-center justify-center bg-black/30 rounded-full w-8 h-8">
+
+        <button
+          onClick={() => route.forward()}
+          className="flex items-center justify-center bg-black/30 rounded-full w-8 h-8"
+        >
           <CaretRight size={'20px'} />
         </button>
       </div>
