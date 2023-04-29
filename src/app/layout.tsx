@@ -21,7 +21,7 @@ export default function RootLayout({
             <Aside />
             <div className="max-h-[calc(100vh-96px)] overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] w-full min-w-[calc(767px-288px)]">
               <Header />
-              <div className="px-4 lg:px-8">{children}</div>
+              <div>{children}</div>
             </div>
           </div>
           <Footer />
