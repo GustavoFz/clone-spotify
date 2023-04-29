@@ -1,7 +1,7 @@
 'use client';
 import { PlayCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 interface SmalCardProps {
   name: string;
@@ -9,9 +9,10 @@ interface SmalCardProps {
 }
 
 export default function SmallCard(props: SmalCardProps) {
+  const router = useRouter();
   return (
-    <Link
-      href="/"
+    <div
+      onClick={() => router.push('/playlist')}
       className="flex items-center rounded-md bg-zinc-500/30 group cursor-pointer"
     >
       <Image
@@ -27,6 +28,6 @@ export default function SmallCard(props: SmalCardProps) {
           <PlayCircle size={48} weight="fill" className="text-green-500" />
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
