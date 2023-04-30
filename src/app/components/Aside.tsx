@@ -7,12 +7,15 @@ import {
 } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 
 export default function Aside() {
   const path = usePathname();
+  const currentUser = useAppSelector((state) => state.userReducer.currentUser);
+  const dispatch = useAppDispatch();
 
   return (
-    <nav className="w-72 bg-zinc-950">
+    <nav className="w-72 min-w-[288px] bg-zinc-950">
       <div className="pt-6">
         <div className="">
           <a href="" className="flex px-6 mb-6">
@@ -72,33 +75,37 @@ export default function Aside() {
             Create Playlist
           </button>
 
-          <div className="h-[1px] mx-6 bg-zinc-600 mt-2"></div>
-          <ul className="flex flex-col py-2 text-zinc-400 font-medium cursor-default">
-            <li className="h-8 flex px-6 group items-center">
-              <a
-                href=""
-                className="truncate cursor-default group-hover:text-white"
-              >
-                Dance Monkey Radio
-              </a>
-            </li>
-            <li className="h-8 flex px-6 group items-center">
-              <a
-                href=""
-                className="truncate cursor-default group-hover:text-white"
-              >
-                {"I'm"} an Albatroz Radio
-              </a>
-            </li>
-            <li className="h-8 flex px-6 group items-center">
-              <a
-                href=""
-                className="truncate  cursor-default  group-hover:text-white"
-              >
-                Bruno e Marrone - antigas e melhores sdssdsd
-              </a>
-            </li>
-          </ul>
+          {currentUser && (
+            <>
+              <div className="h-[1px] mx-6 bg-zinc-600 mt-2"></div>
+              <ul className="flex flex-col py-2 text-zinc-400 font-medium cursor-default">
+                <li className="h-8 flex px-6 group items-center">
+                  <a
+                    href=""
+                    className="truncate cursor-default group-hover:text-white"
+                  >
+                    Dance Monkey Radio
+                  </a>
+                </li>
+                <li className="h-8 flex px-6 group items-center">
+                  <a
+                    href=""
+                    className="truncate cursor-default group-hover:text-white"
+                  >
+                    {"I'm"} an Albatroz Radio
+                  </a>
+                </li>
+                <li className="h-8 flex px-6 group items-center">
+                  <a
+                    href=""
+                    className="truncate  cursor-default  group-hover:text-white"
+                  >
+                    Bruno e Marrone - antigas e melhores sdssdsd
+                  </a>
+                </li>
+              </ul>
+            </>
+          )}
         </div>
       </div>
     </nav>
