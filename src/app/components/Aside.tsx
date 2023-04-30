@@ -32,7 +32,11 @@ export default function Aside() {
               path === '/' ? 'text-white' : 'text-zinc-400'
             }`}
           >
-            <House size={28} />
+            {path === '/' ? (
+              <House weight="fill" size={28} />
+            ) : (
+              <House size={28} />
+            )}
             Home
           </Link>
           <Link
@@ -41,7 +45,11 @@ export default function Aside() {
               path === '/search' ? 'text-white' : 'text-zinc-400'
             }`}
           >
-            <MagnifyingGlass size={28} />
+            {path === '/search' ? (
+              <MagnifyingGlass weight="fill" size={28} />
+            ) : (
+              <MagnifyingGlass size={28} />
+            )}
             Search
           </Link>
           <Link
@@ -50,7 +58,11 @@ export default function Aside() {
               path === '/collection' ? 'text-white' : 'text-zinc-400'
             }`}
           >
-            <Books size={28} />
+            {path === '/collection' ? (
+              <Books weight="fill" size={28} />
+            ) : (
+              <Books size={28} />
+            )}
             Your Library
           </Link>
         </div>
